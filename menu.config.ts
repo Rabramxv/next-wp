@@ -1,12 +1,14 @@
-// Define the menu items
 export const mainMenu = {
-  home: "/",
-  about: "https://github.com/9d8dev/next-wp",
-  blog: "/posts",
+  "Оформление мероприятий": "/events", "Праздники под ключ": "/parties",
+  "Арт-девичник": "/girls-night",
+  "Арт-свидание": "/date-night",
+  "Мастер-классы": "/master-classes",
+  "Студия фото-съёмки": "/studio",
+  "О нас": "/about",
+  "Контакты": "/contacts",
+  "Портфолио": "/portfolio",
 };
 
-export const contentMenu = {
-  categories: "/posts/categories",
-  tags: "/posts/tags",
-  authors: "/posts/authors",
-};
+// Вспомогательное меню (для футера с блого-страницами)
+// Если блог у тебя не ведется, можно оставить пустым
+export const contentMenu = {};
