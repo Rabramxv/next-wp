@@ -1,4 +1,5 @@
 // app/master-classes/page.tsx
+import Image from "next/image";
 export default function MasterClassesPage() {
     return (
       <main className="min-h-screen bg-gradient-to-b from-black via-neutral-900 to-[#1b140d] text-[#f5e6d0] antialiased py-12">
@@ -25,8 +26,28 @@ export default function MasterClassesPage() {
               <h2 className="text-xl font-semibold mb-3">Рисование спиртовыми чернилами</h2>
               <p className="text-[#d6c9b0] mb-3">Увлекательный мастер-класс по работе со спиртовыми чернилами — яркие абстрактные работы.</p>
             </article>
+
+            <article className="bg-black/60 rounded-2xl p-6 border border-black/30">
+              <h2 className="text-xl font-semibold mb-3">Роспись спилов</h2>
+              <p className="text-[#d6c9b0] mb-3">Интересный мастер-класс по работе с натуральными материалами — красочные спилы украшение любого интерьера.</p>
+            </article>
+
           </section>
+          {/* GALERY */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
+                  <Image
+                      src={`/images/master-classes/${i + 1}.jpg`}
+                      alt={`Галерея оформление ${i + 1}`}
+                      fill
+                      className="object-cover"
+                  />
+              </div>
+            ))}
+          </div>
         </div>
+        
       </main>
     );
   }

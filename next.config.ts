@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   images: {
     remotePatterns: [
       {
@@ -16,7 +17,7 @@ const nextConfig: NextConfig = {
       {
         source: "/admin",
         destination: `${process.env.WORDPRESS_URL}/wp-admin`,
-        permanent: true,
+        permanent: false,
       },
     ];
   },

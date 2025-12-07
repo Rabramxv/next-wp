@@ -1,4 +1,6 @@
 // app/events/page.tsx
+import Image from "next/image";
+
 export default function EventsPage() {
     return (
       <main className="min-h-screen bg-gradient-to-b from-black via-neutral-900 to-[#1b140d] text-[#f5e6d0] antialiased py-12">
@@ -26,7 +28,20 @@ export default function EventsPage() {
               </ul>
               <p className="mt-4 text-[#d6c9b0]">Мы слушаем вашу историю, чувствуем вашу эстетику и создаем целостный мир.</p>
             </article>
-  
+          </section>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {Array.from({ length: 11 }).map((_, i) => (
+              <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
+                  <Image
+                      src={`/images/events/1/${i + 1}.jpg`}
+                      alt={`Галерея оформление ${i + 1}`}
+                      fill
+                      className="object-cover"
+                  />
+              </div>
+            ))}
+          </div>
+          <section className="mt-8 space-y-8">
             <article className="bg-black/60 rounded-2xl p-6 border border-black/30">
               <h2 className="text-xl font-semibold mb-3">Тематические фотозоны</h2>
               <p className="text-[#d6c9b0] mb-3">
@@ -42,10 +57,20 @@ export default function EventsPage() {
             </article>
           </section>
   
-          {/* TODO: добавить изображения в public/images/events/ и вставить галерею ниже */}
-          <div className="mt-10">
-            <p className="text-sm text-[#b8ad98]">/* TODO: галерея — положить картинки в /public/images/events/ и вставить здесь */</p>
+          {/* GALERY */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
+                  <Image
+                      src={`/images/events/second/${i + 1}.jpg`}
+                      alt={`Галерея оформление ${i + 1}`}
+                      fill
+                      className="object-cover"
+                  />
+              </div>
+            ))}
           </div>
+
         </div>
       </main>
     );
