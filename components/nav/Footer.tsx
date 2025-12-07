@@ -37,7 +37,7 @@ export function Footer() {
               <span className="text-neutral-500">Нет страниц</span>
             ) : (
               Object.entries(contentMenu).map(([name, href]) => (
-                <Link key={href} href={href} className="hover:underline underline-offset-4">
+                <Link key={String(href)} href={String(href)} className="hover:underline underline-offset-4">
                   {name}
                 </Link>
               ))
