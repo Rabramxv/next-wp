@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/logo.svg";
@@ -11,6 +11,21 @@ import { siteConfig } from "@/site.config";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Закрытие меню при клике вне
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="w-full bg-black/90 sticky top-0 z-50 border-b border-neutral-800">
@@ -26,30 +41,31 @@ export default function Header() {
         <div className="flex items-center gap-4">
 
           {/* Dropdown */}
-          <div className="relative">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setOpen((v) => !v)}
-            >
-              Ещё ▼
-            </Button>
+            <div className="relative hidden md:block" ref={dropdownRef}>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setOpen((v) => !v)}
+              >
+                Ещё ▼
+              </Button>
 
-            {open && (
-              <div className="absolute right-0 mt-2 w-48 bg-black border border-neutral-800 rounded-md shadow-lg z-50">
-                {Object.entries(mainMenu).map(([name, href]) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="block px-4 py-2 text-sm hover:bg-neutral-900 transition"
-                    onClick={() => setOpen(false)}
-                  >
-                    {name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+              {open && (
+                <div className="absolute right-0 mt-2 w-48 bg-black border border-neutral-800 rounded-md shadow-lg z-50">
+                  {Object.entries(mainMenu).map(([name, href]) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className="block px-4 py-2 text-sm hover:bg-neutral-900 transition"
+                      onClick={() => setOpen(false)}
+                    >
+                      {name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
 
           {/* Мобильное меню */}
           <MobileNav />

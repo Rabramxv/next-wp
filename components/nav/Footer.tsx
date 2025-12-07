@@ -30,20 +30,6 @@ export function Footer() {
             ))}
           </div>
 
-          {/* Контент */}
-          <div className="flex flex-col gap-2 text-sm">
-            <h5 className="font-medium">Контент</h5>
-            {Object.entries(contentMenu).length === 0 ? (
-              <span className="text-neutral-500">Нет страниц</span>
-            ) : (
-              Object.entries(contentMenu).map(([name, href]) => (
-                <Link key={String(href)} href={String(href)} className="hover:underline underline-offset-4">
-                  {name}
-                </Link>
-              ))
-            )}
-          </div>
-
         </div>
       </div>
 

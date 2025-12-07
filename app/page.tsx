@@ -80,7 +80,7 @@ export default function HomePage() {
         </div>
 
         <div className="p-6 bg-black/60 rounded-2xl border border-black/30">
-          <h3 className="text-xl font-semibold">Аренда фотостудии</h3>
+          <h3 className="text-xl font-semibold">Аренда помещения</h3>
           <p className="mt-3 text-[#d6c9b0]">
             Снимайте красиво и удобно — просторная студия доступна для аренды. Все условия и оборудование готовы к работе.
           </p>
