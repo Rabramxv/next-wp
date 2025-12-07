@@ -19,8 +19,23 @@ export default function HomePage() {
 
           <div className="flex flex-wrap justify-center gap-3">
 
-            <a href="/portfolio" className="px-5 py-2 rounded-full bg-[#a7c4d2] text-black font-medium hover:opacity-95 transition">Портфолио</a>
+            <a
+              href="/portfolio"
+              className="px-5 py-2 rounded-full bg-[#a7c4d2] text-black font-medium hover:opacity-95 transition"
+            >
+              Портфолио
+            </a>
+
+            <a
+              href="/contacts"
+              className="px-5 py-2 rounded-full bg-[#f5e6d0] text-black font-medium hover:opacity-95 transition"
+            >
+              Заказать услугу
+            </a>
+
           </div>
+
+          
         </div>
       </section>
 

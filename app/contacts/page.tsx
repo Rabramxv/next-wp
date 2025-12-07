@@ -7,6 +7,7 @@ export default function ContactsPage() {
         <section className="bg-black/60 rounded-2xl p-6 border border-black/30 space-y-3 text-[#d6c9b0]">
           <p>Номер телефона: <a className="text-[#f5e6d0] underline" href="tel:+79023068909">+8 (902) 306-89-09</a></p>
           <p>Сообщество в VK: <a className="text-[#f5e6d0] underline" href="https://vk.com/decoriideya" target="_blank" rel="noopener noreferrer">vk.com/decoriideya</a></p>
+          <p>Сообщество в TG: <a className="text-[#f5e6d0] underline" href="https://t.me/decorstudioidea" target="_blank" rel="noopener noreferrer">https://t.me/decorstudioidea</a></p>
           <p>Email: <a className="text-[#f5e6d0] underline" href="mailto:irinakas1@list.ru">irinakas1@list.ru</a></p>
           <p>ООО «Студия декора Идея»</p>
           <p>Юридический и почтовый адрес: 603093 г. Н. Новгород, ул. Родионова, д.192, корп.1</p>

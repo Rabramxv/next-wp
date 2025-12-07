@@ -17,10 +17,10 @@ export default function MasterClassesPage() {
               </ul>
             </article>
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {Array.from({ length: 2 }).map((_, i) => (
+            {Array.from({ length: 1 }).map((_, i) => (
               <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
                   <Image
-                      src={`/images/master-classes/${i + 1}.jpg`}
+                      src={`/images/master-classes/${i + 5}.jpg`}
                       alt={`Галерея оформление ${i + 1}`}
                       fill
                       className="object-cover"
@@ -34,10 +34,10 @@ export default function MasterClassesPage() {
               <p className="text-[#d6c9b0] mb-3">Объёмный мастер-класс «Картина с текстурой» — работа с пастой, холстом и профессиональными материалами.</p>
             </article>
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {Array.from({ length: 1 }).map((_, i) => (
+            {Array.from({ length: 1}).map((_, i) => (
               <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
                   <Image
-                      src={`/images/master-classes/${i + 3}.jpg`}
+                      src={`/images/master-classes/${i + 4}.jpg`}
                       alt={`Галерея оформление ${i + 1}`}
                       fill
                       className="object-cover"
