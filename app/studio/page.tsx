@@ -24,6 +24,18 @@ export default function StudioPage() {
                 <li>2000 рублей — 1 час</li>
                 </ul>
           </article>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                      {Array.from({ length: 4 }).map((_, i) => (
+                        <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
+                            <Image
+                                src={`/images/studio/${i + 1}.jpg`}
+                                alt={`Галерея оформление ${i + 1}`}
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                      ))}
+                    </div>  
 
           <article className="bg-black/60 rounded-2xl p-6 border border-black/30">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6">Зимняя сказка</h2>
@@ -36,10 +48,10 @@ export default function StudioPage() {
           </section>
           {/* GALERY */}
                     <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                      {Array.from({ length: 6 }).map((_, i) => (
+                      {Array.from({ length: 2 }).map((_, i) => (
                         <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
                             <Image
-                                src={`/images/studio/${i + 1}.jpg`}
+                                src={`/images/studio/${i + 5}.jpg`}
                                 alt={`Галерея оформление ${i + 1}`}
                                 fill
                                 className="object-cover"
