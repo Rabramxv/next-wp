@@ -20,7 +20,7 @@ export default function MasterClassesPage() {
             {Array.from({ length: 1 }).map((_, i) => (
               <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
                   <Image
-                      src={`/images/master-classes/${i + 5}.jpg`}
+                      src={`/images/master-classes/${i + 2}.jpg`}
                       alt={`Галерея оформление ${i + 1}`}
                       fill
                       className="object-cover"
@@ -37,7 +37,7 @@ export default function MasterClassesPage() {
             {Array.from({ length: 1}).map((_, i) => (
               <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
                   <Image
-                      src={`/images/master-classes/${i + 4}.jpg`}
+                      src={`/images/master-classes/${i + 3}.jpg`}
                       alt={`Галерея оформление ${i + 1}`}
                       fill
                       className="object-cover"
@@ -69,8 +69,8 @@ export default function MasterClassesPage() {
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="relative w-full h-64 rounded-xl overflow-hidden">
                   <Image
-                      src={`/images/master-classes/${i + 2}.jpg`}
-                      alt={`Галерея оформление ${i + 5}`}
+                      src={`/images/master-classes/${i + 4}.jpg`}
+                      alt={`Галерея оформление ${i + 1}`}
                       fill
                       className="object-cover"
                   />
