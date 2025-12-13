@@ -7,5 +7,5 @@ type SiteConfig = {
 export const siteConfig: SiteConfig = {
   site_name: "Арт-студия «Идея»",
   site_description: "Место, где рождается креатив и творчество",
-  site_domain: "https://ideya-studio.ru", // замени на свой домен
+  site_domain: "decorideann.ru", 
 };

@@ -1,25 +1,9 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  devIndicators: false,
+  output: 'export', // полностью статический экспорт
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: `${process.env.WORDPRESS_HOSTNAME}`,
-        port: "",
-        pathname: "/**",
-      },
-    ],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/admin",
-        destination: `${process.env.WORDPRESS_URL}/wp-admin`,
-        permanent: false,
-      },
-    ];
+    unoptimized: true, // отключаем оптимизацию изображений
   },
 };
 
